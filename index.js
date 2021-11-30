@@ -4,7 +4,7 @@ const axios = require("axios");
 
 try {
     const companyID = core.getInput("companyID")
-    const tasksToCopy = core.getInput('tasksToCopy');
+    const tasksToCopy = JSON.parse(core.getInput('tasksToCopy'));
     const accessCode = core.getInput("accessCode");
     axios.post("http://localhost:5001/usabl-bb1fc/us-central1/githubAction", {
         companyID,
