@@ -12,6 +12,8 @@ try {
         accessCode
     }).then((res) => {
         console.log(res);
+    }).catch((e) => {
+        core.setFailed(e.message);
     })
 } catch (e) {
     core.setFailed(e.message);
