@@ -1,13 +1,15 @@
 name: 'Hello World'
-descritpion: 'Greet someone and record their name'
+description: 'Copy a task on trigger'
 inputs:
-  who-to-greet: # id of input
-    description: 'Who to greet'
+  companyID: # id of input
+    description: 'ID of company'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  tasksToCopy: # id of input
+    description: "Task IDs to duplicate"
+    required: true
+  accessCode: # id of input
+    description: "Access code"
+    required: true
 runs:
   using: 'node12'
   main: 'index.js'
