@@ -6,7 +6,7 @@ try {
     const companyID = core.getInput("companyID")
     const tasksToCopy = JSON.parse(core.getInput('tasksToCopy'));
     const accessCode = core.getInput("accessCode");
-    axios.post("https://us-central1-usabl-bb1fc.cloudfunctions.net/githubAction", {
+    axios.post("https://us-central1-usabl-prod.cloudfunctions.net/githubAction", {
         companyID,
         tasksToCopy,
         accessCode
