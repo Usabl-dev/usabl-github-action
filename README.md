@@ -1,6 +1,6 @@
 # Usabl Duplicate Task Github Action
 
-1. Go to the Settings page in the Usabl Web App
+1. Go to the Settings page in the [Usabl Web App](https://app.usabl.dev)
 
 2. Create a new access code and give it a title
 
