@@ -7,7 +7,8 @@
 3. Create a file under .github/workflows/usabl.yml
 
 4. Paste the following:
-`on:
+```
+on:
   push:
     branches:
       - BRANCH_NAME_GOES_HERE
@@ -23,10 +24,10 @@ jobs:
         with:
           companyID: "COMPANY_ID_GOES_HERE"
           tasksToCopy: '["TASK_ID_GOES_HERE"]'
-          accessCode: "ACCESS_CODE_GOES_HERE"`
+          accessCode: "ACCESS_CODE_GOES_HERE"
+```
 
-5. Replace the placeholders with the relevant information
-5a. Task IDs can be found in the url when viewing a task
+5. Replace the placeholders with the relevant information (task IDs can be found in the url when viewing a task)
 
 6. Commit and push your repo
 
