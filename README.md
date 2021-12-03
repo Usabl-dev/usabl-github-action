@@ -8,7 +8,7 @@ This GitHub Action is a utility that automatically duplicates a task or series o
 
 2. Create a new access code and give it a title
 
-3. Once you've created a Usabl access token, store the newly created access token as a GitHub repository secret titled `USABL_ACCESS_TOKEN`. Under Settings > Secrets in your GitHub repo, you'll see a link to "Add a new secret". Click that and paste in your access token and click "Save secret".
+3. Once you've created a Usabl access code, store the newly created access code as a GitHub repository secret titled `USABL_ACCESS_CODE`. Under Settings > Secrets in your GitHub repo, you'll see a link to "Add a new secret". Click that and paste in your access code and click "Save secret".
 
 (For help storing this see the [GitHub docs](https://help.github.com/en/articles/creating-a-github-action).)
 
@@ -33,7 +33,7 @@ jobs:
         with:
           companyID: "COMPANY_ID_GOES_HERE"
           tasksToCopy: '["TASK_ID_GOES_HERE"]'
-          accessCode: ${{ secrets.USABL_ACCESS_TOKEN }}
+          accessCode: ${{ secrets.USABL_ACCESS_CODE }}
 ```
 
 6. Replace the placeholders with the relevant information (task IDs can be found in the url when viewing a task)
@@ -44,7 +44,5 @@ jobs:
 
 ## Troubleshooting
 
-Once your workflow has been created, the best way to confirm that the workflow is executing correctly is to create a new pull request with the workflow file and verify that the newly created action succeeds.
-
-If the action fails, there may be a problem with your configuration. To investigate, dig into the action's logs to view any error messages.
+Once your workflow has been created, the best way to confirm that the workflow is executing correctly is to create a new pull request with the workflow file and verify that the newly created action succeeds and the selected task has been duplicated. If you have any issues, email us at contact@usabl.dev.
 
