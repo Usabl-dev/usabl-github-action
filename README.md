@@ -1,5 +1,9 @@
 # Usabl Duplicate Task Github Action
 
+This GitHub Action is a utility that automatically duplicates a task or series of tasks in Usabl. This is useful for making sure you are consistently getting feedback from developers as you ship new code. 
+
+# Configuration
+
 1. Go to the Settings page in the [Usabl Web App](https://app.usabl.dev)
 
 2. Create a new access code and give it a title
