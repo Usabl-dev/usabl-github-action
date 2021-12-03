@@ -8,14 +8,15 @@ This GitHub Action is a utility that automatically duplicates a task or series o
 
 2. Create a new access code and give it a title
 
-3. Once you've created a Usabl access token, store the newly created access token as a repository secret titled `USABL_ACCESS_TOKEN`. Under Settings > Secrets in your GitHub repo, you'll see a link to "Add a new secret". Click that and paste in your access token and click "Save secret".
+3. Once you've created a Usabl access token, store the newly created access token as a GitHub repository secret titled `USABL_ACCESS_TOKEN`. Under Settings > Secrets in your GitHub repo, you'll see a link to "Add a new secret". Click that and paste in your access token and click "Save secret".
 
 (For help storing this see the [GitHub docs](https://help.github.com/en/articles/creating-a-github-action).)
 
 4. Create a file under .github/workflows/usabl.yml
 
-5. Paste the following:
-```
+5. Paste the following code:
+
+```yaml
 on:
   push:
     branches:
@@ -24,7 +25,7 @@ on:
 jobs:
   usabl_job:
     runs-on: ubuntu-latest
-    name: A job to duplicate a usabl task
+    name: Usabl duplicate and re-run tasks with developers
     steps:
       - name: Duplicate Usabl task
         id: Duplication
@@ -32,7 +33,7 @@ jobs:
         with:
           companyID: "COMPANY_ID_GOES_HERE"
           tasksToCopy: '["TASK_ID_GOES_HERE"]'
-          accessCode: "ACCESS_CODE_GOES_HERE"
+          accessCode: ${{ secrets.USABL_ACCESS_TOKEN }}
 ```
 
 6. Replace the placeholders with the relevant information (task IDs can be found in the url when viewing a task)
@@ -40,3 +41,10 @@ jobs:
 7. Commit and push your repo
 
 ## Now whenever you push to the specified branch, the specified task(s) will be duplicated and tests will be re-run automatically
+
+## Troubleshooting
+
+Once your workflow has been created, the best way to confirm that the workflow is executing correctly is to create a new pull request with the workflow file and verify that the newly created action succeeds.
+
+If the action fails, there may be a problem with your configuration. To investigate, dig into the action's logs to view any error messages.
+
