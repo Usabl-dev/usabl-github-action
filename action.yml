@@ -1,15 +1,21 @@
-name: 'Hello World'
-description: 'Copy a task on trigger'
+name: 'Usabl Duplicate Task GitHub Action'
+description: 'Triggers a task or series of tasks to duplicate and run again in the Usabl app.'
+author: 'Usabl'
+branding:
+  icon: toggle-right
+  color: gray-dark
 inputs:
-  companyID: # id of input
-    description: 'ID of company'
+  companyID: 
+    description: 'The companyID found under Settings in the Usabl dashboard.'
     required: true
-  tasksToCopy: # id of input
-    description: "Task IDs to duplicate"
+  tasksToCopy: 
+    description: "TaskIDs to duplicate. Each taskID can be found on the Home page in the Usabl dashboard."
     required: true
-  accessCode: # id of input
-    description: "Access code"
+  accessCode: 
+    description: "Access code with write access to the Usabl project. Found on the Settings page in the Usabl dashboard"
     required: true
 runs:
   using: 'node12'
   main: 'index.js'
+  env:
+    USABL_ACCESS_TOKEN: ${{ inputs.accessToken }}
