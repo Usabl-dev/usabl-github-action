@@ -1,5 +1,7 @@
 # Usabl Duplicate Task Github Action
 
+Usabl helps developer-focused companies get feedback from developers. The Usabl GitHub action helps top-notch companies integrate usability directly into their workflow. Our mission is to help developers build more, faster, all while saving you time figuring out what to build for them. Learn more on our website: [Usabl](https://usabl.dev)
+
 This GitHub Action is a utility that automatically duplicates a task or series of tasks in Usabl. This is useful for making sure you are consistently getting feedback from developers as you ship new code. 
 
 # Configuration
