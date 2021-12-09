@@ -5,6 +5,7 @@ Usabl helps developer-focused companies get feedback from developers. The Usabl 
 This GitHub Action is a utility that automatically duplicates a task or series of tasks in Usabl. This is useful for making sure you are consistently getting feedback from developers as you ship new code. 
 
 # Configuration
+Visuals help? Watch this video which walks through the steps below: [Usabl GitHub Action config](https://www.loom.com/share/748c2d14e8b849b093eaeb7f45b52282)
 
 1. Go to the Settings page in the [Usabl Web App](https://app.usabl.dev)
 
